@@ -18,7 +18,7 @@ class _LogInScreenState extends State<LogInScreen> {
           onTap: () {
             // Utils.toastMessages("tostmessage");
             // Navigator.pushNamed(context, RoutesName.home);
-            Utils.flushBarErrorMessage('is there noOne', context);
+            Utils.snackBAr('is there noOne', context);
           },
           child: const Text("data")),),
     );
