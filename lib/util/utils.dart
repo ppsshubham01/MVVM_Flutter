@@ -1,9 +1,14 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:another_flushbar/flushbar_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Utils {
+  static void focusFieldChangeUi(BuildContext context,
+      FocusNode currentFocusnode, FocusNode nextFocusNode) {
+    currentFocusnode.unfocus();
+    FocusScope.of(context).requestFocus(nextFocusNode);
+  }
+
   static toastMessages(String tostmessage) {
     // Fluttertoast.showToast(msg: tostmessage);
   }
@@ -18,13 +23,13 @@ class Utils {
           positionOffset: 20,
           flushbarPosition: FlushbarPosition.TOP,
           borderRadius: BorderRadius.circular(20),
-          icon: Icon(
+          icon: const Icon(
             Icons.error,
             size: 28,
             color: Colors.white,
           ),
-          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          padding: EdgeInsets.all(15),
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: const EdgeInsets.all(15),
           backgroundColor: Colors.red,
           title: 'SAD',
           messageColor: Colors.black,
