@@ -3,7 +3,7 @@ import 'package:mvvm/util/routes/routes.dart';
 import 'package:mvvm/util/routes/routes_name.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
